@@ -20,6 +20,16 @@ function myFunction() {
   
      // Copy the text inside the text field
     navigator.clipboard.writeText(copyText.innerText);
+
+    var button  = document.getElementById('copyButton');
+    var originalText = button.innerHTML;
+    var newText = "Copied!";
+    button.innerHTML = newText;
+      setTimeout(function() {
+        button.innerHTML = originalText;
+        
+      }, 1000);
+
   
     // Alert the copied text
     //alert("Copied the text: " + copyText.innerText);
